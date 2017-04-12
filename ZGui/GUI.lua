@@ -138,13 +138,13 @@ end]]
 function DisplayIdentity() -- Affiche l'identité du joueur
 	MenuTitle = "Carte d'identité"
 	ClearMenu()
-	Menu.addButton("NOMDUJOUEUR","CancelEvent","arg")
+	Menu.addButton("NOMDUJOUEUR","CancelEvent",nil)
 end
 
 function MenuPerso()
 	MenuTitle = "Menu Personnel"
 	ClearMenu()
-	Menu.addButton("Carte d'identité","FunctionName1","arg")	
+	Menu.addButton("Carte d'identité","DisplayIdentity",nil)	
 	Menu.addButton("Deuxieme","FunctionName2",nil) 
 end
 
