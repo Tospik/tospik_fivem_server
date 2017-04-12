@@ -142,14 +142,14 @@ function DisplayIdentity() -- Affiche l'identité du joueur
 function MenuPerso()
 	MenuTitle = "Menu Personnel"
 	ClearMenu()
-	Menu.addButton("Carte d'identité","FunctionName1","arg")	
+	Menu.addButton("Carte d'identité","DisplayIdentity","arg")	
 	Menu.addButton("Deuxieme","FunctionName2",nil) 
 end
 
 Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
-		if IsControlJustPressed(1,Keys["H"]) then
+		if IsControlJustPressed(1,Keys[74]) then
 		
 			MenuPerso()                     
 			Menu.hidden = not Menu.hidden    
