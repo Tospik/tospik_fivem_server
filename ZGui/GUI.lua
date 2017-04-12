@@ -139,6 +139,8 @@ function DisplayIdentity() -- Affiche l'identité du joueur
 	MenuTitle = "Carte d'identité"
 	ClearMenu()
 	Menu.addButton("NOMDUJOUEUR","CancelEvent","arg")
+end
+
 function MenuPerso()
 	MenuTitle = "Menu Personnel"
 	ClearMenu()
