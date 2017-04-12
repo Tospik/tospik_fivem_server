@@ -135,10 +135,12 @@ end]]
 
 --------------------------------------------------------------------------------------------------------------------
 
+local playerName = GetPlayerName(player)
+
 function DisplayIdentity() -- Affiche l'identité du joueur
 	MenuTitle = "Carte d'identité"
 	ClearMenu()
-	Menu.addButton("NOMDUJOUEUR","CancelEvent",nil)
+	Menu.addButton(playerName,"CancelEvent",nil)
 end
 
 function MenuPerso()
