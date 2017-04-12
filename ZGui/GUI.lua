@@ -130,7 +130,7 @@ function MenuCallFunction(fnc, arg)
 	_G[fnc](arg)
 end
 
-function CancelEvent()
+--[[function CancelEvent()
 end
 
 --------------------------------------------------------------------------------------------------------------------
@@ -156,5 +156,27 @@ Citizen.CreateThread(function()
 
 		end
 		Menu.renderGUI()     
+	end
+end)
+]]
+
+function NameOfMenu()
+	MenuTitle = "Title of the menu"
+	ClearMenu()
+	Menu.addButton("First Button","FunctionName1","arg")	
+	Menu.addButton("Second Button","FunctionName2",nil) -- No arg
+	-- ...
+end
+
+Citizen.CreateThread(function()
+	while true do
+		Citizen.Wait(0)
+		if IsControlJustPressed(1,Keys["H"]) then
+		
+			NameOfMenu()                     -- Menu to draw
+			Menu.hidden = not Menu.hidden    -- Hide/Show the menu
+
+		end
+		Menu.renderGUI()     -- Draw menu on each tick if Menu.hidden = false
 	end
 end)
