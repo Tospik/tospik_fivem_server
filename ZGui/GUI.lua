@@ -135,12 +135,12 @@ end]]
 
 --------------------------------------------------------------------------------------------------------------------
 
-local playerName = GetPlayerName(player)
+--local playerName = GetPlayerName(player)
 
 function DisplayIdentity() -- Affiche l'identité du joueur
 	MenuTitle = "Carte d'identité"
 	ClearMenu()
-	Menu.addButton(playerName,"CancelEvent",nil)
+	Menu.addButton(GetPlayerName(player),"CancelEvent",nil)
 end
 
 function MenuPerso()
@@ -153,7 +153,7 @@ end
 Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
-		if IsControlJustPressed(1,Keys["H"]) then
+		if IsControlJustPressed(1,Keys["F5"]) then
 		
 			MenuPerso()                     
 			Menu.hidden = not Menu.hidden    
