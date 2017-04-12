@@ -130,7 +130,7 @@ function MenuCallFunction(fnc, arg)
 	_G[fnc](arg)
 end
 
-function CancelEvent()
+--[[function CancelEvent()
 end
 
 --------------------------------------------------------------------------------------------------------------------
@@ -139,19 +139,19 @@ function DisplayIdentity() -- Affiche l'identité du joueur
 	MenuTitle = "Carte d'identité"
 	ClearMenu()
 	Menu.addButton("NOMDUJOUEUR","CancelEvent","arg")
-end
+end]]
 
 function MenuPerso()
 	MenuTitle = "Menu Personnel"
 	ClearMenu()
-	Menu.addButton("Carte d'identité","DisplayIdentity","arg")	
+	Menu.addButton("Carte d'identité","FunctionName1","arg")	
 	Menu.addButton("Deuxieme","FunctionName2",nil) 
 end
 
 Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
-		if IsControlJustPressed(1,Keys[74]) then
+		if IsControlJustPressed(1,Keys["H"]) then
 		
 			MenuPerso()                     
 			Menu.hidden = not Menu.hidden    
