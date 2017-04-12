@@ -131,7 +131,7 @@ function MenuCallFunction(fnc, arg)
 end
 
 --[[function CancelEvent()
-end
+end]]
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -139,7 +139,7 @@ function DisplayIdentity() -- Affiche l'identité du joueur
 	MenuTitle = "Carte d'identité"
 	ClearMenu()
 	Menu.addButton("NOMDUJOUEUR","CancelEvent","arg")
-end]]
+end
 
 function MenuPerso()
 	MenuTitle = "Menu Personnel"
