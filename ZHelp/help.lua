@@ -1,0 +1,7 @@
+TriggerEvent('es:addCommand', 'help', function(source, args, user)
+    TriggerClientEvent("chatMessage", source, "", {0, 0, 0}, "/cuff ID - ^2 Menotter")
+    TriggerClientEvent("chatMessage", source, "", {0, 0, 0}, "/heal ID - ^2 Réanimer")
+	TriggerClientEvent("chatMessage", source, "", {0, 0, 0}, " X - ^2 Mettre les mains en l'air")
+    TriggerClientEvent("chatMessage", source, "", {0, 0, 0}, " M - ^2 Contrôles du véhicule")
+	TriggerClientEvent("chatMessage", source, "", {0, 0, 0}, " F5 - ^2 Menu personnel")
+end)
