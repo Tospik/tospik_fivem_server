@@ -17,10 +17,10 @@ local vehshop = {
 		scale = 0.4,
 		font = 0,
 		["main"] = { 
-			title = "CATEGORIES", 
+			title = "Police", 
 			name = "main",
 			buttons = { 
-				{title = "Voiture", name = "Vehicles", description = ""},
+				{title = "Hélicoptère", name = "Vehicles", description = ""},
 			}
 		},
 		["vehicles"] = { 
@@ -31,10 +31,10 @@ local vehshop = {
 			}
 		},
 		["compacts"] = { 
-			title = "Cadet", 
+			title = "Police", 
 			name = "compacts",
 			buttons = { 
-				{title = "Véhicule de fonction", name = "Véhicule de fonction", costs = 0, description = {}, model = "polmav"},
+				{title = "Mavrick", name = "Véhicule de fonction", costs = 0, description = {}, model = "polmav"},
 			}
 		},
 	}
@@ -417,31 +417,8 @@ function ButtonSelected(button)
 	local btn = button.name
 	if this == "main" then
 		if btn == "Vehicles" then
-			OpenMenu('vehicles')
-		elseif btn == "Motorcycles" then
-			OpenMenu('motorcycles')
-		end
-	elseif this == "vehicles" then
-		if btn == "Sports" then
-			OpenMenu('sports')
-		elseif btn == "Sedans" then
-			OpenMenu('sedans')
-		elseif btn == "Compacts" then
 			OpenMenu('compacts')
-		elseif btn == "Coupes" then
-			OpenMenu('coupes')
-		elseif btn == "Sports Classics" then
-			OpenMenu("sportsclassics")
-		elseif btn == "Super" then
-			OpenMenu('super')
-		elseif btn == "Muscle" then
-			OpenMenu('muscle')
-		elseif btn == "Off-Road" then
-			OpenMenu('offroad')
-		elseif btn == "SUVs" then
-			OpenMenu('suvs')
-		elseif btn == "Vans" then
-			OpenMenu('vans')
+		
 		end
 	elseif this == "compacts" or this == "coupes" or this == "sedans" or this == "sports" or this == "sportsclassics" or this == "super" or this == "muscle" or this == "offroad" or this == "suvs" or this == "vans" or this == "industrial" or this == "cycles" or this == "motorcycles" then
 		--if playermoney >= button.costs then
